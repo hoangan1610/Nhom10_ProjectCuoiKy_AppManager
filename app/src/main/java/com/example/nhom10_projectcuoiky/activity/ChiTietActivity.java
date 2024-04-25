@@ -52,6 +52,7 @@ public class ChiTietActivity extends AppCompatActivity {
         });
     }
     private void themGioHang(){
+
         if (Utils.manggiohang.size() > 0){
             boolean flag = false;
             int soluong = Integer.parseInt(spinner.getSelectedItem().toString());
@@ -126,7 +127,6 @@ public class ChiTietActivity extends AppCompatActivity {
             for(int i = 0; i < Utils.manggiohang.size(); i++){
                 totalItem = totalItem + Utils.manggiohang.get(i).getSoluong();
             }
-
             badge.setText(String.valueOf(totalItem));
         }
     }

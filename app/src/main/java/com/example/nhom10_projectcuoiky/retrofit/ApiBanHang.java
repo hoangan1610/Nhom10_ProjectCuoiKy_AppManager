@@ -4,6 +4,7 @@ import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 
+import com.example.nhom10_projectcuoiky.model.DonHangModel;
 import com.example.nhom10_projectcuoiky.model.LoaiSpModel;
 import com.example.nhom10_projectcuoiky.model.SanPhamMoiModel;
 import com.example.nhom10_projectcuoiky.model.UserModel;
@@ -43,6 +44,35 @@ public interface ApiBanHang {
 
     );
 
+    @FormUrlEncoded
+    @POST("reset.php")
+    Observable<UserModel> resetPass(
+            @Field("email") String email
+    );
+
+    @FormUrlEncoded
+    @POST("donhang.php")
+    Observable<UserModel> createOder(
+            @Field("email") String email,
+            @Field("sdt") String sdt,
+            @Field("tongtien") String tongtien,
+            @Field("iduser") int id,
+            @Field("diachi") String diachi,
+            @Field("soluong") int soluong,
+            @Field("chitiet") String chitiet
+    );
+
+    @FormUrlEncoded
+    @POST("xemdonhang.php")
+    Observable<DonHangModel> xemDonHang(
+            @Field("iduser") int id
+    );
+
+    @FormUrlEncoded
+    @POST("timkiem.php")
+    Observable<SanPhamMoiModel> search(
+            @Field("search") String search
+    );
 
 
 }
