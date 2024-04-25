@@ -3,6 +3,12 @@ package com.example.nhom10_projectcuoiky.model;
 public class LoaiSp {
     int id;
     String tensanpham;
+
+    public LoaiSp(String tensanpham, String hinhanh) {
+        this.tensanpham = tensanpham;
+        this.hinhanh = hinhanh;
+    }
+
     String hinhanh;
 
     public int getId() {
