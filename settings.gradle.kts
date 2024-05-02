@@ -10,6 +10,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        ////neumorphism
+        maven { url = uri("https://jitpack.io") }
+
     }
 }
 
